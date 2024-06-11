@@ -1,21 +1,16 @@
-// import { Fragment } from 'react/jsx-runtime';
-// import { MouseEvent } from 'react';
-
 import { useState } from 'react';
 
-function ListGroup() {
-  let items = ['Dinajpur', 'Rangpur', 'Thakurgaon', 'Paharpur', 'Saidpur'];
+interface Props {
+  items: string[];
+  heading: string;
+}
 
+function ListGroup({ items, heading }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
-  // Event Handler
-  // const handleClick = (event: MouseEvent) => {
-  //   console.log(event);
-  // };
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {items.length == 0 && <p>No items found.</p>}
       <ul className='list-group'>
         {items.map((item, index) => (
