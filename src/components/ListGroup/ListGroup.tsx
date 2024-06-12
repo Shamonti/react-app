@@ -1,6 +1,7 @@
 import { useState } from 'react';
 // import styles from './ListGroup.module.css';
 import styled from 'styled-components';
+import { Md30Fps } from 'react-icons/md';
 
 const List = styled.ul`
   list-style: none;
@@ -27,8 +28,9 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
   return (
     <>
       <h1>{heading}</h1>
+      <Md30Fps color='blue' size='30' />
       {items.length == 0 && <p>No items found.</p>}
-      <List>
+      <List style={{ backgroundColor: 'orange' }}>
         {items.map((item, index) => (
           <ListItem
             active={index === selectedIndex}
