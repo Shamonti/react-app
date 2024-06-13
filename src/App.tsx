@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import Cart from './components/Cart';
-import NavBar from './components/NavBar';
+import ExpandableText from './components/ExpandableText';
+import { useState } from 'react';
 
 const App = () => {
-  const [cartItems, setCartItems] = useState([
-    'Product1',
-    'Product2',
-    'Product3',
-  ]);
+  const [children, setChildren] = useState(
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis temporibus quaerat nobis dolor sit amet consectetur adipisicing elit. Sint perspiciatis temporibus quaerat nobis'
+  );
+  const handleClick = () => {
+    children.length > 10 ? setChildren(children.slice(0, 10)) : children;
+  };
 
   return (
     <div>
-      <NavBar cartItemsCount={cartItems.length} />
-      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+      <ExpandableText onClick={handleClick}>{children}</ExpandableText>
     </div>
   );
 };
