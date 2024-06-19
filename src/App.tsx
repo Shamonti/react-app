@@ -1,11 +1,7 @@
-import ExpandableText from './components/ExpandableText';
+import Form from './components/Form';
 
 const App = () => {
-  return (
-    <div>
-      <ExpandableText>Lorem ipsum</ExpandableText>
-    </div>
-  );
+  return <Form />;
 };
 
 export default App;
