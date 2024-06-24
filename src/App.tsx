@@ -1,7 +1,7 @@
-import Form from './components/Form';
+import ExpenseForm from './components/ExpenseForm';
 
 const App = () => {
-  return <Form />;
+  return <ExpenseForm />;
 };
 
 export default App;
