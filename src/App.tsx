@@ -9,9 +9,22 @@ const App = () => {
     { id: 3, description: 'Jackfruit', amount: 200, category: 'Groceries' },
   ]);
 
+  const addExpense = (data: {
+    description: string;
+    amount: number;
+    category: string;
+  }) => {
+    const newExpense = {
+      id: expenses.length + 1,
+      ...data,
+    };
+
+    setExpenses(prevExpense => [...prevExpense, newExpense]);
+  };
+
   return (
     <>
-      <ExpenseForm />
+      <ExpenseForm onSubmit={addExpense} />
       <ExpenseList
         expenses={expenses}
         onDelete={id => setExpenses(expenses.filter(e => e.id !== id))}

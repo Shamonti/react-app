@@ -22,17 +22,21 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const ExpenseForm = () => {
+interface Props {
+  onSubmit: SubmitHandler<FormData>;
+}
+
+const ExpenseForm = ({ onSubmit }: Props) => {
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const onSubmit: SubmitHandler<FormData> = data => {
-    console.log(data);
-    alert('Form submitted successfully.');
-  };
+  // const onSubmit: SubmitHandler<FormData> = data => {
+  //   console.log(data);
+  //   alert('Form submitted successfully.');
+  // };
 
   return (
     <form className='form' onSubmit={handleSubmit(onSubmit)}>
