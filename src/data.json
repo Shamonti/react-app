@@ -1,0 +1,22 @@
+{
+  "alarmData": [
+    { "name": "TT Raised", "value": 19 },
+    { "name": "TT Pending", "value": 54 }
+  ],
+  "deviceDownData": [
+    { "name": "TT Raised", "value": 184 },
+    { "name": "TT Pending", "value": 228 }
+  ],
+  "linkDownData": [
+    { "name": "TT Raised", "value": 401 },
+    { "name": "TT Pending", "value": 125 }
+  ],
+  "linkFlapData": [
+    { "name": "TT Raised", "value": 7 },
+    { "name": "TT Pending", "value": 4 }
+  ],
+  "OSPFDownData": [
+    { "name": "TT Raised", "value": 13 },
+    { "name": "TT Pending", "value": 13 }
+  ]
+}
